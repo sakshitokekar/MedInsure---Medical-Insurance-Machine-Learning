@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title> Medical Insurance Cost </title>
+	<style>	
+		* {
+			  box-sizing: border-box;
+		}
+		body {
+			font-size: 1.25rem;
+			font-family: sans-serif;
+			line-height: 150%;
+			text-shadow: 0 2px 2px #7e1eb6;
+			overflow:hidden;
+		}
+		section {
+			color: #fff;
+			text-align: center;
+		}
+		div {
+			height: 100%;
+		}
+		article {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			padding: 20px;
+		}
+		h1 {
+			font-size: 1.75rem;
+			margin: 20 5 15 5;
+		}
+		/* Pattern styles */
+		.container {
+			display: table;
+			width: 100%;
+		}
+		.left-half {
+			background-color: #9d2bdf;
+			position: absolute;
+			left: 0px;
+			width: 50%;
+		}
+		.right-half {
+			background-color: #7e1eb6;
+			position: absolute;
+			right: 0px;
+			width: 50%;
+		}
+
+	</style>
+</head>
+<header>
+	<h1 style="font-size: 50px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" style="margin-top: 100px; margin-bottom:50px; text-align:left;float:left;">MedInsure</h1>
+</header>
+<body>
+	<section class="container">
+  <div class="left-half">
+    <article>
+      <img src = 'https://static.vecteezy.com/system/resources/previews/000/411/294/original/character-of-a-family-holding-an-insurance-illustration-vector.jpg' alt="Sidepic"/ width = 90%>
+    </article>
+  </div>
+  <div class="right-half">
+    <article>
+      <h2 style="font-size:50px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">SIGNUP PAGE</h2>
+	<form action="/emailinput" method="POST">
+		<input type="email" name="em" placeholder="Enter Email-Id" required style="font-size:30px; font-style:bold; border-radius: 10px; width: 550px;">
+		<br>
+		<h3>Password will be sent to your mail</h3>
+		<input type="submit" value="Sign Up" style="font-size:30px; border-radius: 10px; box-shadow: 2px 2px yellow;">
+	</form>
+	{{msg}}
+	<br>
+	<a href="/login" style="color: #fff;">Already have an account? Login</a>
+    </article>
+  </div>
+</section>
+</body>
+<footer>
+okokokokokok
+</footer>
+</html>

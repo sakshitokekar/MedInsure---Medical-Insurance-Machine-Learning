@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title> Medical Insurance Cost </title>
+	<style>
+		* {
+			  box-sizing: border-box;
+		}
+		header{
+			margin-top: 15%;
+		}
+		body {
+			font-size: 1.25rem;
+			font-family: sans-serif;
+			line-height: 150%;
+			text-shadow: 0 2px 2px #9d2bdf;
+		}
+		h1{
+			margin: 20 5 15 5;
+            font-size: 50px;
+		}
+		#sectionmain{
+			background-color: #7e1eb6;
+			width: 100%;
+			height: 100%
+
+		}
+		h2{
+			margin: 0 0 10 0;
+		}
+        form{
+            font-size: 25px;
+        }
+       
+        a:hover{
+            font-size: 31px;
+        }
+	.input_num{
+		width: 250px;
+	}
+	</style>
+</head>
+	<h1 style="  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >MedInsure</h1>
+</header>
+<body>
+    <section id="sectionmain">
+        <hr style="color: blue;background-color: blue; height: 2%">
+            <center><h1 style="color: white;">Medical Insurance Cost Prediction</h1></center>
+            <hr style="color: blue;background-color: blue; height: 2%">
+            <br><br>
+            <form action="/calc" method="POST">
+                <section style="margin-left: 35%; color: white;">
+                Age:
+                <input type="number" name="age" placeholder="Enter Age" style="font-size: 25px;" required min = 5 max = 100 class = "input_num">
+                <br><br>
+                Gender:
+                <input type="radio" value="female" name="r1" style="font-size: 25px; margin-left: 4%;" checked>Female</input>
+                <input type="radio" value="male" name="r1" style="font-size: 25px; margin-left: 2%;">Male</input>
+                <br><br>
+                Bmi:
+                <input type="number" name="bmi" step=any style="font-size: 25px;" required min = 1 max = 80  class = "input_num" placeholder= "Enter BMI">
+		<a href="{{url_for('show_bmi')}}" style="font-size: 30px; color:#92DD3E	;">Calculate BMI</a>
+                <br><br>
+                Children:
+                <select name = "c" style="font-size: 25px;" required>
+                    <option value = "0" >0</option>
+                    <option value = "1" >1</option>
+                    <option value = "2" >2</option>
+                    <option value = "3" >3</option>
+                    <option value = "4" >4</option>
+                    <option value = "5" >5</option>
+                </select>
+                <br><br>
+                Smoker:
+                <input type="radio" value="no" name="s1" style="font-size: 25px; margin-left: 6%;" checked>No</input>
+                <input type="radio" value="yes" name="s1" style="font-size: 25px; margin-left: 6%;">Yes</input>
+                <br><br>
+                <span style="font-size: 35px; color: yellow; text-shadow: 3px 3px black;">CHARGE: {{msg}}</span>
+                <br><br>
+            </section>
+                <center><input type="submit" value="Get Insurance Cost" style="font-size: 35px; border-radius: 13px; "><button style="font-size: 20px; border-radius: 10px; margin-left:50px;"><a href="{{url_for('back')}}" style="font-size: 30px;">BACK</a></button></center>
+            </form>
+        </section>
+</body>
+</html>

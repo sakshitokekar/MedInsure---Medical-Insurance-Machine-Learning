@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title> Medical Insurance Cost </title>
+	<style>
+		* {
+			  box-sizing: border-box;
+		}
+		header{
+			margin-top: 15%;
+		}
+		body {
+			font-size: 1.25rem;
+			font-family: sans-serif;
+			line-height: 150%;
+			text-shadow: 0 2px 2px #9d2bdf;
+		}
+		h1{
+			margin: 20 5 15 5;
+            font-size: 50px;
+		}
+		#sectionmain{
+			background-color: #7e1eb6;
+			width: 100%;
+			height: 100%
+
+		}
+		h2{
+			margin: 0 0 10 0;
+		}
+        form{
+            font-size: 25px;
+        }
+        
+        a:hover{
+            font-size: 31px;
+        }
+	</style>
+</head>
+	<h1 style="  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >MedInsure</h1>
+</header>
+<body>
+    <section id="sectionmain">
+        <hr style="color: blue;background-color: blue; height: 2%">
+            <center><h1 style="color: white;">BMI Calculator</h1></center>
+            <hr style="color: blue;background-color: blue; height: 2%">
+            <br><br>
+            <form action="/bmi_calc" method = "POST">
+                <section style="margin-left: 35%; color: white;">
+                Height (in m):
+                <input type="number" name="height" step = any placeholder="Enter Height" style="font-size: 25px;" required min = 1>
+                <br><br>
+                Weight(in kg):
+                <input type="number" name="weight" step=any placeholder = "Enter Weight" style="font-size: 25px;" required min = 1>
+                <br><br>
+                <span style="font-size: 35px; color: yellow; text-shadow: 3px 3px black;"> BMI: {{ bmi_ans }}</span>
+                <br><br>
+            </section>
+                <center><input type="submit" value="Calculate BMI" style="font-size: 35px; border-radius: 13px; "><button style="font-size: 20px; border-radius: 10px;  margin-left:50px;"><a href="{{url_for('calc')}}" style="font-size: 30px;">BACK</a></button></center>
+            </form>
+        </section>
+</body>
+</html>
